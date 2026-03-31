@@ -47,3 +47,17 @@ pivot['avg_time_hms'] = pivot['total_seconds'].apply(seconds_to_hms)
 #Wyświetlenie pivot
 print("\nŚredni czas top vs reszta w każdej kategorii:")
 print(pivot)
+
+#Najszybszy i najwolniejszy zawodnik
+
+#Najszybszy
+fastest = df.loc[df['total_seconds'].idxmin()]
+
+#Najwolniejszy
+slowest = df.loc[df['total_seconds'].idxmax()]
+
+print("\n🥇 Najszybszy zawodnik:")
+print(fastest[['event_name','gender','division','total_time']])
+
+print("\n🐢 Najwolniejszy zawodnik:")
+print(slowest[['event_name','gender','division','total_time']])
