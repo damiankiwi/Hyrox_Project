@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #Wczytanie CSV
-df = pd.read_csv("data/RawData.csv")
+df = pd.read_csv("../data/RawData.csv")
 
 #Zostawienie potrzebnych kolumn i filtr tylko open i pro
 df = df[['gender', 'division', 'total_time']]
