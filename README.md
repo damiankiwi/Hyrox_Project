@@ -20,8 +20,10 @@ This project analyzes HYROX race results from London (2021–2023) with the goal
 
 The analysis focuses on:
 - Differences between Top 10% athletes and the rest
-- Performance comparison across segments
-- Impact of individual race components on total time
+- Performance comparison across race segments
+- Impact of individual workout stations on total race time
+
+The project also includes an interactive application for exploring the dataset dynamically, allowing users to visualize and compare performance metrics.
 
 ---
 
@@ -98,6 +100,10 @@ It allows users to:
 - Visualize performance metrics
 - Compare segment times interactively
 - Explore key performance drivers in HYROX races
+
+## Preview
+
+![HYROX App Screenshot](assets/screenshot.png)
 
 ---
 
