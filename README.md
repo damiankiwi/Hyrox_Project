@@ -122,6 +122,8 @@ It allows users to:
 - Hyrox_Project/
   - data/
     - london_2021_2023.csv
+  - assets/
+    - screenshot.png
   - hyrox_analysis.ipynb
   - app.py
   - README.md
