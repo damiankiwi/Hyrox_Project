@@ -6,6 +6,8 @@
 - Setup
 - Features
 - Analysis Process
+- Machine Learning Model
+- Feature Importance Insights
 - Interactive Application
 - Key Insights
 - Project Structure
@@ -32,6 +34,7 @@ The project also includes an interactive application for exploring the dataset d
 - Python 3.x  
 - pandas  
 - matplotlib  
+- scikit-learn  
 - Jupyter Notebook  
 
 ---
@@ -41,7 +44,9 @@ The project also includes an interactive application for exploring the dataset d
 1. Install Python 3.x on your computer.
 
 2. Install required libraries:
-pip install pandas matplotlib
+```bash
+pip install pandas matplotlib scikit-learn numpy jupyter
+```
 
 3. Download or clone the repository from GitHub.
 
@@ -65,6 +70,9 @@ hyrox_analysis.ipynb
 - PRO vs OPEN category analysis
 - Segment contribution analysis (% share)
 - Visualization using scatter plots, boxplots, and pie charts
+- Machine learning model (Random Forest) to estimate performance factors
+- Feature importance analysis for performance drivers
+- Data-driven recommendation system
 
 ---
 
@@ -92,6 +100,45 @@ hyrox_analysis.ipynb
 
 ---
 
+## Machine Learning Model
+
+In addition to statistical analysis, a machine learning model was developed to explore predictive relationships in the dataset.
+
+### Model Type
+- Random Forest Regressor
+
+### Objective
+- Predict total HYROX race time based on athlete and event characteristics
+
+### Features Used
+- Gender
+- Age group
+- Division
+- Event name
+
+### Evaluation Metrics
+- MAE (Mean Absolute Error): ~740 seconds (~12 minutes)
+- R² Score: ~0.05
+
+### Key Findings
+- The model shows that demographic and category-based features have limited predictive power for exact race time
+- However, it reveals structural patterns in performance differences between athlete groups
+
+---
+
+## Feature Importance Insights (ML)
+
+The model identified the most influential factors affecting performance:
+
+- Age group is the strongest predictor of race time
+- Gender has a moderate impact on performance differences
+- Athlete division (PRO vs OPEN) significantly affects results
+- Event variation also contributes to performance differences
+
+These findings align with statistical analysis results and confirm observed performance patterns.
+
+---
+
 ## Interactive Application
 
 An interactive application was developed to explore the dataset dynamically.
@@ -114,6 +161,7 @@ It allows users to:
 - Run accounts for approximately 50% of total race time
 - Top 10% athletes perform significantly better in Run and Work segments
 - Improving Run performance provides the highest potential improvement in total time
+- A machine learning model confirmed that demographic factors influence performance patterns, although they are not sufficient to accurately predict race outcomes
 
 ---
 
@@ -125,6 +173,7 @@ It allows users to:
   - assets/
     - screenshot.png
   - hyrox_analysis.ipynb
+  - ml_model.py
   - app.py
   - README.md
 
@@ -132,17 +181,19 @@ It allows users to:
 
 ## Conclusion
 
-This analysis demonstrates that HYROX performance is primarily driven by endurance efficiency and execution in key segments.
+This project combines statistical analysis and machine learning to explore HYROX performance dynamics.
+
+Key findings show that HYROX performance is primarily driven by endurance efficiency and execution in key segments.
 
 The most impactful improvement areas are:
 - Running efficiency under fatigue
 - Work station performance consistency
 
-These insights can be used to optimize training strategies for competitive athletes.
+The machine learning model validates these findings, showing that while demographic factors influence performance trends, they are not sufficient to accurately predict exact race outcomes.
 
 ---
 
 ## Contact
 
 Damian  
-Aspiring Data Analyst / QA Engineer transitioning into IT
+Aspiring Data Analyst
