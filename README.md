@@ -9,6 +9,7 @@
 - Machine Learning Model
 - Feature Importance Insights
 - Interactive Application
+- Power BI Dashboard
 - Key Insights
 - Project Structure
 - Conclusion
@@ -36,6 +37,7 @@ The project also includes an interactive application for exploring the dataset d
 - matplotlib  
 - scikit-learn  
 - Jupyter Notebook  
+- Power BI (DAX)
 
 ---
 
@@ -44,20 +46,18 @@ The project also includes an interactive application for exploring the dataset d
 1. Install Python 3.x on your computer.
 
 2. Install required libraries:
-```bash
-pip install pandas matplotlib scikit-learn numpy jupyter
-```
+   pip install pandas matplotlib scikit-learn numpy jupyter
 
 3. Download or clone the repository from GitHub.
 
 4. Open the project folder:
-Hyrox_Project/
+   Hyrox_Project/
 
 5. Run Jupyter Notebook:
-jupyter notebook
+   jupyter notebook
 
 6. Open the file:
-hyrox_analysis.ipynb
+   hyrox_analysis.ipynb
 
 ---
 
@@ -72,7 +72,6 @@ hyrox_analysis.ipynb
 - Visualization using scatter plots, boxplots, and pie charts
 - Machine learning model (Random Forest) to estimate performance factors
 - Feature importance analysis for performance drivers
-- Data-driven recommendation system
 
 ---
 
@@ -95,17 +94,11 @@ hyrox_analysis.ipynb
 ### 5. Segment Contribution
 - Calculated percentage share of each segment in total race time
 
-### 6. Ideal Athlete Profile
-- Built average performance profile based on top athletes
-
 ---
 
 ## Machine Learning Model
 
-In addition to statistical analysis, a machine learning model was developed to explore predictive relationships in the dataset.
-
-### Model Type
-- Random Forest Regressor
+A Random Forest Regressor was used to explore performance patterns.
 
 ### Objective
 - Predict total HYROX race time based on athlete and event characteristics
@@ -116,52 +109,63 @@ In addition to statistical analysis, a machine learning model was developed to e
 - Division
 - Event name
 
-### Evaluation Metrics
-- MAE (Mean Absolute Error): ~740 seconds (~12 minutes)
+### Results
+- MAE: ~740 seconds (~12 minutes)
 - R² Score: ~0.05
 
-### Key Findings
-- The model shows that demographic and category-based features have limited predictive power for exact race time
-- However, it reveals structural patterns in performance differences between athlete groups
+### Key Finding
+- Demographic features alone are not sufficient to accurately predict race performance, but reveal structural patterns between athlete groups.
 
 ---
 
-## Feature Importance Insights (ML)
+## Feature Importance Insights
 
-The model identified the most influential factors affecting performance:
-
-- Age group is the strongest predictor of race time
-- Gender has a moderate impact on performance differences
-- Athlete division (PRO vs OPEN) significantly affects results
-- Event variation also contributes to performance differences
-
-These findings align with statistical analysis results and confirm observed performance patterns.
+- Age group is the strongest predictor of performance differences
+- Gender has moderate influence
+- Division (PRO vs OPEN) significantly impacts results
+- Event variation contributes to performance differences
 
 ---
 
 ## Interactive Application
 
-An interactive application was developed to explore the dataset dynamically.
+An interactive application was developed to explore HYROX performance data.
 
-It allows users to:
-- Visualize performance metrics
-- Compare segment times interactively
-- Explore key performance drivers in HYROX races
+### Features:
+- Dynamic visualization of performance metrics
+- Comparison of athlete segments
+- Exploration of key performance drivers
 
-## Preview
+### Preview:
+![Application Screenshot](assets/screenshot.png)
 
-![HYROX App Screenshot](assets/screenshot.png)
+---
+
+## Power BI Dashboard
+
+An additional Power BI dashboard was created to visualize HYROX performance differences between PRO and OPEN athletes.
+
+### Features:
+- KPI metrics (Run, Work, Roxzone, Total time)
+- Segment comparison between PRO and OPEN
+- Interactive slicer for division filtering
+- Key insight highlighting main performance drivers
+
+### Files:
+- hyrox_dashboard.pbix
+- assets/HYROX_dashboard_screenshot.png
+
+### Preview:
+![Power BI Dashboard](assets/HYROX_dashboard_screenshot.png)
 
 ---
 
 ## Key Insights
 
-- Run and Work segments are the strongest predictors of overall performance
-- Roxzone has a lower impact compared to other segments
-- Run accounts for approximately 50% of total race time
-- Top 10% athletes perform significantly better in Run and Work segments
-- Improving Run performance provides the highest potential improvement in total time
-- A machine learning model confirmed that demographic factors influence performance patterns, although they are not sufficient to accurately predict race outcomes
+- Run and Roxzone segments are the main drivers of performance differences
+- Work segment shows similar performance between PRO and OPEN athletes
+- Roxzone efficiency has a strong impact on overall race time
+- Improving Run performance provides the highest potential time gain
 
 ---
 
@@ -171,25 +175,21 @@ It allows users to:
   - data/
     - london_2021_2023.csv
   - assets/
+    - HYROX_dashboard_screenshot.png
     - screenshot.png
   - hyrox_analysis.ipynb
   - ml_model.py
   - app.py
+  - hyrox_dashboard.pbix
   - README.md
 
 ---
 
 ## Conclusion
 
-This project combines statistical analysis and machine learning to explore HYROX performance dynamics.
+This project combines statistical analysis, machine learning, and Power BI visualization to explore HYROX performance dynamics.
 
-Key findings show that HYROX performance is primarily driven by endurance efficiency and execution in key segments.
-
-The most impactful improvement areas are:
-- Running efficiency under fatigue
-- Work station performance consistency
-
-The machine learning model validates these findings, showing that while demographic factors influence performance trends, they are not sufficient to accurately predict exact race outcomes.
+The results show that race performance is primarily driven by endurance efficiency and transition speed rather than demographic factors.
 
 ---
 
